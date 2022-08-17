@@ -7,7 +7,7 @@
 # - print 'buzz' for multiples of 5, 
 # - print 'fizzbuzz' for multiples of 3 and 5.
 
-# Program with exactly **7** bugs:
+#Program with exactly **7** bugs:
   
 # ```python
 three_mul = 'fizz'
