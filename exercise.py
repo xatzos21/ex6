@@ -230,8 +230,8 @@ else:
 # - display results  
 
 #```python
-x = int(input("First number: "))
-y = int(input("Second number: "))
+x = float(input("First number: "))
+y = float(input("Second number: "))
 
 if x % y == 0:
     print("First number is divisible by second number, result =", x / y)
