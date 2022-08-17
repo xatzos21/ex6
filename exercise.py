@@ -42,7 +42,7 @@ n = 5
 number = 1
 sum = 0
 while number < n + 1:
-    sum = sum + 1
+    sum += number
     number = number + 1
     print("Sum =", sum)
 
@@ -57,7 +57,7 @@ while number < n + 1:
 #```python
 n = 5
 sum = 0
-for num in range(n):
+for num in range(n+1):
     sum += num
     print("Sum =", sum)
 
@@ -103,15 +103,15 @@ else:
 #running the program 
 
 #```python
-x = input("First number: ")
-y = input("Second number: ")
-z = input("Third number: ")
+x = int(input("First number: "))
+y = int(input("Second number: "))
+z = int(input("Third number: "))
 
-if x == y or y == z:
+if x == y or y == z or x == z:
     result = 0
 else:
-    sum = x + y + z
-print("Calculated sum is ", result)
+    result = x + y + z
+    print("Calculated sum is ", result)
 
 
 #  Task 6 - summing two integers
@@ -132,10 +132,11 @@ y = int(input("Second number: "))
 result = x + y
 
 if result > 15 and result < 20:
-    sum = 20
-    print("Calculated sum is ", sum)
+    result = 20
+    print("Calculated sum is ", result)
 else:
-    print("calculated sum is", x+y)
+    print("calculated sum is ", x+y)
+
 
 
 #  Task 7 - swapping variables
@@ -153,7 +154,13 @@ b = str(input("Second value: "))
 
 print("Before swapping: a =", a, " b =" , b)
 
-print("After swapping: a =", b, " b =" , a)
+# b ,a = a, b
+
+tmp = b
+b = a
+a = tmp
+
+print("After swapping: a =", a, " b =" , b)
 
 
 #  Task 8 - max and min values
@@ -165,22 +172,30 @@ print("After swapping: a =", b, " b =" , a)
 # what you get after running the program  
 
 #```python
+# x = float(input("First number: "))
+# y = float(input("Second number: "))
+# z = float(input("Third number: "))
+
+# if x > y and x > z:
+#     print("The maximum value is ", x)
+# elif y >x and y > z:
+#     print("The maximum value is ", y)
+# elif z > y and z > x:
+#     print("The maximum value is ", z)
+# if x < y and x < z:
+#     print("The minimum value is ", x)
+# elif y < x and y < z:
+#     print("The minimum value is ", y)
+# elif z < y and z < x:
+#     print("The minimum value is ", z)
+
 x = float(input("First number: "))
 y = float(input("Second number: "))
 z = float(input("Third number: "))
 
-if x > y and x > z:
-    print("The maximum value is ", x)
-elif y >x and y > z:
-    print("The maximum value is ", y)
-elif z > y and z > x:
-    print("The maximum value is ", z)
-if x < y and x < z:
-    print("The minimum value is ", x)
-elif y < x and y < z:
-    print("The minimum value is ", y)
-elif z < y and z < x:
-    print("The minimum value is ", z)
+
+print("The maximum value is ", max(x, y ,z))
+print("The minimum value is ", min(x, y ,z))
 
 
 #   Task 9 - convertion
